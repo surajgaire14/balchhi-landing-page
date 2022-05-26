@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "remixicon/fonts/remixicon.css";
 
+
 AOS.init({
   // Global settings:
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -29,7 +30,8 @@ function App() {
           <h4>Stay Connected :</h4>
           <div className="icons">
             <a href="https://www.facebook.com/Balchhireosrt"><i className="ri-facebook-fill" ></i></a> 
-            <a href=""><i className="ri-instagram-line"></i></a> 
+            <a href="https://www.instagram.com/balchhiresort/"><i className="ri-instagram-line"></i></a>
+           <a href=""><i></i></a>
           </div>
         </div>
       </div>

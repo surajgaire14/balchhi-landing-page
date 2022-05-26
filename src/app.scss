@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Roboto&display=swap");
 
+html {
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +34,12 @@ body {
       -webkit-filter: blur(3px);
       transition: all 1s;
       z-index: 2;
+
+      @media screen and (max-width:425px) {
+        height: 100vh;
+        width: 100%;
+      }
+
     }
     .content {
       position: absolute;
@@ -44,11 +54,52 @@ body {
       text-align: left;
       color: rgb(225, 225, 225);
 
+      @media screen and (max-width:425px) {
+          top: 15%;
+          width:300px;
+      }
+
+      @media screen and (max-width:786px) {
+          margin-left: -50px;
+          top: 20%;
+      }
+
+      @media screen and (max-width:320px) {
+        width: 200px;
+        margin-left: -20px;
+
+      }
+ 
+
       p {
         font-size: 1.5rem;
+
+        @media screen and (max-width:425px) {
+          font-size: 12px;
+        }
+
+        @media screen and (max-width:768px) {
+          font-size: 1rem;
+        }
+        @media screen and (max-width:425px) {
+          font-size: 12px;
+        }
+
       }
       h3 {
         font-size: 3.5rem;
+
+        @media screen and (max-width:768px) {
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width:425px) {
+          font-size: 1.5rem;
+      }
+      @media screen and (max-width:320px) {
+        font-size: 20px;
+      }
+
       }
 
       .icons__container {
@@ -57,14 +108,26 @@ body {
         flex-direction: column;
         gap: 10px;
 
+        @media screen and (max-width:768px) {
+          margin-top: 20px;
+        }
+
         h4 {
           font-size: 1.2rem;
+
+          @media screen and (max-width:320px) {
+            font-size: 16px;
+          }
         }
 
         .icons {
           display: flex;
           gap: 20px;
           cursor: pointer;
+
+          @media screen and (max-width:425px) {
+              gap: 15px;
+          }
 
           a {
             &:nth-child(1):hover {
@@ -78,6 +141,14 @@ body {
             i {
               font-size: 2rem;
               transition: all 0.5s;
+
+              @media screen and (max-width:425px) {
+                  font-size: 1.5rem;
+              }
+
+              @media screen and (max-width:320px) {
+                font-size: 18px;
+              }
             }
           }
         }
@@ -85,41 +156,3 @@ body {
     }
   }
 }
-
-.content {
-  @media (max-width:768px) {
-    p {
-      font-size: 1rem;
-    }
-
-    h3 {
-      font-size: 2rem;
-    }
-  }
-}
-
-// @media (max-width: 768px) {
-//   .content {
-//     p {
-//       font-size: 1rem;
-//     }
-
-//     h3 {
-//       font-size: 2rem;
-//     }
-//   }
-// }
-
-// @media (max-width: 425px) {
-//   .bg__container {
-//     .content {
-//       p {
-//         font-size: 0.5rem;
-//       }
-
-//       h3 {
-//         font-size: 1.5rem;
-//       }
-//     }
-//   }
-// }
