@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  background: rgba($color: #000000, $alpha: 0.9);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+
+  .bg__container {
+    &::after {
+      content: "";
+      height: 100vh;
+      width: 100vw;
+      background: url(./images/balchhi1.jpg);
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: block;
+      filter: blur(3px);
+      -webkit-filter: blur(3px);
+      transition: all 1s;
+      z-index: 2;
+    }
+    .content {
+      position: absolute;
+      z-index: 1;
+      top: 13%;
+      left: 15%;
+      margin-top: 205px;
+      margin-left: -145px;
+      width: 550px;
+      height: 450px;
+      transition: all 1s;
+      text-align: left;
+      color: rgb(225, 225, 225);
+
+      p {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 3.5rem;
+      }
+
+      .icons__container {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4 {
+          font-size: 1.2rem;
+        }
+
+        .icons {
+          display: flex;
+          gap: 20px;
+          cursor: pointer;
+
+          a {
+            &:nth-child(1):hover {
+              color: rgb(66, 103, 178);
+            }
+
+            &:nth-child(2):hover {
+              color: #8a3ab9;
+            }
+
+            i {
+              font-size: 2rem;
+              transition: all 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  @media (max-width:768px) {
+    p {
+      font-size: 1rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+}
+
+// @media (max-width: 768px) {
+//   .content {
+//     p {
+//       font-size: 1rem;
+//     }
+
+//     h3 {
+//       font-size: 2rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 425px) {
+//   .bg__container {
+//     .content {
+//       p {
+//         font-size: 0.5rem;
+//       }
+
+//       h3 {
+//         font-size: 1.5rem;
+//       }
+//     }
+//   }
+// }
