@@ -73,6 +73,7 @@ body {
 
       p {
         font-size: 1.5rem;
+        text-shadow: #000000 1px 1px;
 
         @media screen and (max-width: 425px) {
           font-size: 12px;
@@ -85,11 +86,12 @@ body {
           font-size: 12px;
         }
         @media screen and (min-width: 1024px) {
-         font-size: 1.5rem;
+          font-size: 1.5rem;
         }
       }
       h3 {
         font-size: 3.5rem;
+        text-shadow: #000000 1px 1px;
 
         @media screen and (max-width: 768px) {
           font-size: 2rem;
@@ -103,7 +105,7 @@ body {
         }
 
         @media screen and (min-width: 1024px) {
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
       }
 
@@ -113,7 +115,7 @@ body {
         flex-direction: column;
         gap: 10px;
 
-        @media screen and (max-width:1024px) {
+        @media screen and (min-width: 1024px) {
           margin-top: 40px;
         }
 
@@ -123,6 +125,7 @@ body {
 
         h4 {
           font-size: 1.2rem;
+          text-shadow: #000000 1px 1px;
 
           @media screen and (max-width: 320px) {
             font-size: 16px;
