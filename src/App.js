@@ -2,6 +2,9 @@ import "./app.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "remixicon/fonts/remixicon.css";
+import { useSpring,animated } from "react-spring";
+
+
 
 
 AOS.init({
@@ -20,9 +23,21 @@ AOS.init({
   once: false,
 });
 
+
+
 function App() {
+
+  const styles = useSpring({
+    from:{
+      opacity:0
+    },
+    to:{
+      opacity:1
+    }
+    
+  })
   return (
-    <div className="bg__container">
+    <animated.div className="bg__container" style={styles}>
       <div className="content" data-aos="fade-up">
         <p>Nice to meet you,</p>
         <h3>We are preparing something exciting & amazing for you.</h3>
@@ -34,7 +49,7 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 

@@ -10,6 +10,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
+    "react-spring": "^9.4.5",
     "remixicon": "^2.5.0",
     "sass": "^1.52.1",
     "web-vitals": "^2.1.0"
