@@ -31,7 +31,6 @@ function App() {
           <div className="icons">
             <a href="https://www.facebook.com/Balchhireosrt"><i className="ri-facebook-fill" ></i></a> 
             <a href="https://www.instagram.com/balchhiresort/"><i className="ri-instagram-line"></i></a>
-           <a href=""><i></i></a>
           </div>
         </div>
       </div>
