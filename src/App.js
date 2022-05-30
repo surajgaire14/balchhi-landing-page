@@ -20,7 +20,6 @@ AOS.init({
 
   duration: 3000,
   easing: "ease",
-  once: false,
 });
 
 
