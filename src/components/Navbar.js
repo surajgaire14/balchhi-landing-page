@@ -42,13 +42,13 @@ const Navbar = () => {
             // data-tip="985-7074022"
             data-tip = "click here to copy phone number"
             onClick={() => {
-              navigator.clipboard.writeText("9857074022");
+              navigator.clipboard.writeText("9804409022");
             }}
           >
             <PhoneLineIcon /> 
           </i>
         </button>
-        <p style={{color:"#fff"}}>9857074022</p> 
+        <p style={{color:"#fff"}}>9804409022</p> 
         <ReactTooltip />
         <ToastContainer position="bottom-right" autoClose={2000} />
       </div>
