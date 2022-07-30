@@ -46,7 +46,7 @@ const App = () => {
   const normaliseDays = (value) => ((value - MIN) * 100) / (maxDays - MIN);
 
   React.useEffect(() => {
-    const duration = new Date("July 30,2022 00:00:00").getTime();
+    const duration = new Date("August 30,2022 00:00:00").getTime();
 
     interval.current = setInterval(() => {
       const now = new Date().getTime();
