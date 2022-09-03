@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+}
+
+body{
+  background: #f3f3f5;
+  color: #000;
+  overflow-x: hidden;
+  transition: all .3s ease-in-out;
+
+  @media (min-width:425px) and (max-width:1024px) {
+    overflow-x:hidden;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+

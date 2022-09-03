@@ -1,0 +1,218 @@
+.iframe {
+  @media (max-width: 426px) {
+    // width: 420px;
+    width: 300px;
+    height: 500px;
+  }
+
+  @media (min-width: 426px) and (max-width: 769px) {
+    width: 760px;
+    height: 600px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1025px) {
+    width: 1000px;
+    height: 700px;
+  }
+  @media (min-width: 1025px) and (max-width: 1441px) {
+    width: 1300px;
+    // height: 700px;
+    height: 75vh;
+  }
+
+  @media (min-width: 1441px) and (max-width: 2561px) {
+    width: 1400px;
+    height: 710px;
+  }
+
+  // @media (min-width:1441px) {
+  //   width: 1300px;
+  //   // height: 900px;
+  // }
+  // @media (min-width:1441px) and (max-width:1920px) {
+  //   width: 1300px;
+  // }
+}
+
+.hero__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #f3f3f5;
+  font-size: 2.03vh;
+  z-index: 1;
+  background: transparent;
+  // margin-top: 100px;
+  margin-top: 13vh;
+
+  @media (max-width: 426px) {
+    margin-top: 110px;
+  }
+
+  @media (min-width: 426px) and (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vh;
+    width: 40vw;
+
+    @media (max-width: 426px) {
+      width: 100%;
+      margin-top: 0.5vh;
+    }
+
+    @media (min-width: 426px) and (max-width: 768px) {
+      width: 100%;
+      justify-content: center;
+      text-align: left;
+      margin-top: 5vh;
+    }
+
+    .iframe {
+      @media (max-width: 426px) {
+        width: 50%;
+        height: 50%;
+      }
+    }
+
+    .greeting {
+      color: #ff4500;
+      text-transform: uppercase;
+      // font-size: 18px;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    h1 {
+      // font-size: 4rem;
+      font-size: 4em;
+      text-transform: capitalize;
+      font-weight: 600;
+      line-height: 1.2;
+
+      @media (max-width: 425px) {
+        font-size: 3rem;
+      }
+
+      @media (min-width: 426px) and (max-width: 768px) {
+        font-size: 3.1rem;
+      }
+      @media (min-width: 768px) and (max-width: 1025px) {
+        font-size: 3em;
+      }
+    }
+    p {
+      // font-size: 1.3rem;
+      font-size: 1.3em;
+      @media (max-width: 426px) {
+        font-size: 1.2rem;
+      }
+    }
+    .blob,
+    .blob1 {
+      position: absolute;
+      top: -10vw;
+      left: -20vw;
+      opacity: 0.3;
+      z-index: -1;
+      width: 60vw;
+      height: 60vw;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3Cfilter id=%22grain%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E %3CfeFlood flood-color=%22%23ffffff%22 result=%22neutral-gray%22 %2F%3E %3CfeTurbulence in=%22neutral-gray%22 type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22 %2F%3E %3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22 %3E%3C%2FfeColorMatrix%3E %3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E %3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%3E%3C%2FfeFuncA%3E %3C%2FfeComponentTransfer%3E %3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22 %2F%3E %3C%2Ffilter%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M602.5%2C715Q252%2C930%2C270.5%2C532Q289%2C134%2C621%2C317Q953%2C500%2C602.5%2C715Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg filter=%22url(%23grain)%22 clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23ffeaa7%22 d=%22M602.5%2C715Q252%2C930%2C270.5%2C532Q289%2C134%2C621%2C317Q953%2C500%2C602.5%2C715Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+      --animate-duration: 2.5s;
+      // animation-duration: 2.5s;
+      @media (max-width: 426px) {
+        top: 30vw;
+        opacity: 0.4;
+      }
+
+      @media (min-width: 426px) and (max-width: 769px) {
+        top: 0.5vh;
+        opacity: 0.4;
+      }
+
+      @media (min-width: 769px) and (max-width: 1025px) {
+        top: 5vh;
+      }
+    }
+    .blob1 {
+      top: 5vh;
+      right: -25vw;
+      left: auto;
+      background-image: url("data:image/svg+xml;utf8, %3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cdefs%3E %3Cfilter id=%22grain%22 x=%22-50vw%22 y=%22-50vh%22 width=%22100vw%22 height=%22100vh%22%3E %3CfeFlood flood-color=%22%23ffffff%22 result=%22neutral-gray%22 %2F%3E %3CfeTurbulence in=%22neutral-gray%22 type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22 %2F%3E %3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22 %3E%3C%2FfeColorMatrix%3E %3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E %3CfeFuncA type=%22table%22 tableValues=%220 0 0.5 0%22%3E%3C%2FfeFuncA%3E %3C%2FfeComponentTransfer%3E %3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22 %2F%3E %3C%2Ffilter%3E %3CclipPath id=%22shape%22%3E %3Cpath fill=%22currentColor%22 d=%22M602.5%2C715Q252%2C930%2C270.5%2C532Q289%2C134%2C621%2C317Q953%2C500%2C602.5%2C715Z%22%3E%3C%2Fpath%3E %3C%2FclipPath%3E %3C%2Fdefs%3E %3Cg filter=%22url(%23grain)%22 clip-path=%22url(%23shape)%22%3E %3Cpath fill=%22%23a29bfe%22 d=%22M602.5%2C715Q252%2C930%2C270.5%2C532Q289%2C134%2C621%2C317Q953%2C500%2C602.5%2C715Z%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+      @media (max-width: 426px) {
+        right: 1vw;
+        top: 40vh;
+        width: 40vw;
+      }
+
+      @media (min-width: 426px) and (max-width: 769px) {
+        top: 75vh;
+        width: 40vw;
+        right: 0.1vw;
+        opacity: 0.5;
+      }
+      @media (min-width: 769px) and (max-width: 1025px) {
+        top: 50vh;
+        right: 0;
+        left: auto;
+        width: 40vw;
+      }
+      @media (min-width: 1025px) and (max-width: 1441px) {
+        top: 20vh;
+        right: 1vw;
+        width: 40vw;
+      }
+      @media (min-width: 1441px) and (max-width: 2561px) {
+        top: 20vh;
+        right: 0vw;
+        left: auto;
+        width: 40vw;
+      }
+    }
+
+    button {
+      display: flex;
+      background: transparent;
+      border: none;
+      text-align: left;
+      align-items: center;
+      cursor: pointer;
+      gap: 0.5vw;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ff4500;
+      margin: 1vh 0 0.5vh;
+
+      .icon {
+        font-size: 2.5rem;
+        color: orangered;
+      }
+
+      @media (min-width: 426px) and (max-width: 768px) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  img {
+    height: 60vh;
+    width: 33vw;
+    border-radius: 10px;
+
+    @media (min-width: 426px) and (max-width: 769px) {
+      width: 100%;
+      margin-top: 20px;
+      height: 55vh;
+    }
+    @media (max-width: 426px) {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}

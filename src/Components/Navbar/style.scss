@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Shadow {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1) !important;
+  // background: #fff;
+  //   border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(2.8px);
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-bottom: 1px solid #0001;
+  color: #fff;
+}
+
+button {
+  @media (max-width: 426px) {
+    display: none;
+  }
+}
+
+.MuiButton-root {
+  @media (max-width: 426px) {
+    display: none;
+  }
+}
+
+.css-hyum1k-MuiToolbar-root {
+  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+}
+#Home div {
+  padding: 0;
+}
+
+.image__link {
+  @media (max-width:426px) {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+  }
+  img {
+    background: transparent;
+  }
+}
+
+
+
+
+
+.active {
+  border-bottom: 3px solid orangered;
+}
+
+#Home div {
+  div {
+    @media (min-width: 601px) and (max-width: 769px) {
+      font-size: 16px;
+      gap: 20px;
+    }
+  }
+  // a {
+
+  // }
+}
+
+//   @media (min-width: 425px) and (max-width: 769px) {
+//     width: 4rem;
+//   }
+// #Home div a {
+// }

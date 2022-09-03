@@ -1,0 +1,114 @@
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 0;
+    p{
+        font-size: 1.3rem;
+
+        @media (max-width:426px) {
+          font-size: 1.2rem;
+          margin: 5px 0;
+        }
+    }
+    h2{
+        font-weight: 600;
+        @media (max-width:426px) {
+          font-size: 2.5rem;
+          text-align: center;
+        }
+    }
+  }
+
+  .location__container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    // flex-wrap: wrap;
+
+    @media (max-width:426px) {
+      flex-wrap: wrap;
+    }
+    @media (min-width:426px) and (max-width:769px) {
+      flex-wrap: wrap;
+    }
+    .contact {
+      width: 50%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      place-items: center;
+      gap: 20px;
+      @media (max-width:426px) {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 20px;
+      }
+
+      @media (min-width:426px) and (max-width:769px) {
+        gap: 20px;
+        width: 100%;
+      }
+
+      .grid__item {
+        border-radius: 5px;
+        border: 1px solid #0003;
+        width: 19vw;
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .3s all ease-in-out;
+        gap: 5px;
+        @media (max-width:426px) {
+            width: 100%;
+        }
+
+        @media (min-width:426px) and (max-width:769px) {
+          width: 100%;
+        }
+
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .icons {
+          display: flex;
+          gap: 10px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  .map {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width:426px) {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+    @media (min-width:426px) and (max-width:769px) {
+      width: 100%;
+      align-items: center;
+      justify-content:center;
+    }
+
+    .balchhi__map{
+      @media (min-width:426px) and (max-width:769px) {
+        width: 100%;        
+      }
+    }
+  }
+}

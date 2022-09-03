@@ -1,0 +1,163 @@
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.contact__container .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1vh 0;
+}
+.contact__container .about p {
+  font-size: 1.3rem;
+}
+@media (max-width: 426px) {
+  .contact__container .about p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+  }
+}
+.contact__container .about h2 {
+  font-weight: 600;
+}
+@media (max-width: 426px) {
+  .contact__container .about h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+.contact__container .location__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+@media (max-width: 426px) {
+  .contact__container .location__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  .contact__container .location__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.contact__container .location__container .contact {
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0, 1fr) 20px minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  place-items: center;
+  gap: 20px;
+}
+@media (max-width: 426px) {
+  .contact__container .location__container .contact {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 20px;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  .contact__container .location__container .contact {
+    gap: 20px;
+    width: 100%;
+  }
+}
+.contact__container .location__container .contact .grid__item {
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 19vw;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  gap: 5px;
+}
+@media (max-width: 426px) {
+  .contact__container .location__container .contact .grid__item {
+    width: 100%;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  .contact__container .location__container .contact .grid__item {
+    width: 100%;
+  }
+}
+.contact__container .location__container .contact .grid__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.contact__container .location__container .contact .grid__item .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+.contact__container .map {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media (max-width: 426px) {
+  .contact__container .map {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  .contact__container .map {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (min-width: 426px) and (max-width: 769px) {
+  .contact__container .map .balchhi__map {
+    width: 100%;
+  }
+}
