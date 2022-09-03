@@ -41,7 +41,7 @@ const Facilities = () => {
         </Typography>
         <Typography>
           Balchhi is equipped with number of facilities such as Bar,Kitchen and
-          peaceful place to hangout.It has soothing sound and lighting system
+          peaceful place to hangout.We have soothing sound and lighting system
           and provides private dining to spend with your loved ones.
         </Typography>
         <button>Contact Now</button>

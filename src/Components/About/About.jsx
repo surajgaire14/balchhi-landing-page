@@ -27,7 +27,7 @@ export default function About() {
           </Typography>
         </div>
         <Typography component="p" variant="p">
-          Prakash Kharal and Bijay Neupane together opened the balchhi in 2020 AD in manigram.It is
+          Prakash Kharal and Bijay Neupane together opened the balchhi in 2019 AD in manigram.It is
           well known with a substantial gathering of people including
           families,kids and customers arriving in daily basis.
         </Typography>
