@@ -6,7 +6,6 @@ import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
-// import ListItemText from "@mui/material/ListItemText";
 import MenuItem from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -21,21 +20,19 @@ const drawerWidth = "100%";
 const navItems = ["Home", "Facilities", "About Us", "Contact"];
 
 export default function Navbar() {
-  // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [tabOpen, setTabOpen] = React.useState(false);
   const [checked, setChecked] = React.useState(false);
   const containerRef = React.useRef(null);
 
   let scrollPosition = UpdateScrollPosition();
-  console.log(scrollPosition);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
     setTabOpen(!tabOpen);
     setChecked((prev) => !prev);
   };
-  
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center", padding: 0 }}>
       <List style={{ padding: 0 }}>
@@ -43,7 +40,7 @@ export default function Navbar() {
           <ListItem key={i} style={{ borderBottom: "1px solid #0002" }}>
             <ListItemButton sx={{ textAlign: "left" }}>
               <Link key={i} to={item === "Home" ? "" : item}>
-                {/* <ListItemText primary={item} /> */} {item}
+                {item}
               </Link>
             </ListItemButton>
           </ListItem>
@@ -65,7 +62,6 @@ export default function Navbar() {
           background: "#f3f3f5",
           borderBottom: "1px solid #0002",
           boxShadow: "none",
-          
         }}
         ref={containerRef}
         position="fixed"
@@ -98,7 +94,7 @@ export default function Navbar() {
               src={logo}
               alt="logo"
               style={{ borderRadius: "50%", width: "5rem" }}
-              className= "images"
+              className="images"
             />
           </Link>
           <Box

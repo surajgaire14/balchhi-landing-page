@@ -44,7 +44,6 @@ const Footer = () => {
           </div>
           <div className="content">
             {links.map(({ name, link }, i) => {
-              console.log(link);
               return (
                 <div key={i}>
                   <Typography variant="h5" component={"h5"}>

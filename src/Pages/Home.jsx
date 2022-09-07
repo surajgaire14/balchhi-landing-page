@@ -17,33 +17,17 @@ const Home = () => {
     Aos.init();
   }, []);
 
-  const HeroRef = React.useRef();
-  const MemoriesRef = React.useRef();
-  const FacilitiesRef = React.useRef();
-  const AboutRef = React.useRef();
-  const TestimonialsRef = React.useRef();
-  const GalleryRef = React.useRef();
-  const ContactRef = React.useRef();
 
-  const refs = {
-    HeroRef,
-    MemoriesRef,
-    FacilitiesRef,
-    AboutRef,
-    TestimonialsRef,
-    GalleryRef,
-    ContactRef,
-  };
 
   return (
     <>
-      <Navbar refs={refs} />
+      <Navbar  />
       <main style={{ width: "100vw" }} id="main">
         <div style={{ width: "80%", margin: "auto" }}>
-          <Hero ref={HeroRef} />
-          <Memories ref={MemoriesRef} />
-          <Facilities ref={FacilitiesRef} />
-          <About ref={AboutRef} />
+          <Hero  />
+          <Memories />
+          <Facilities  />
+          <About  />
           <Typography
             variant="h2"
             component={"h1"}
@@ -55,9 +39,9 @@ const Home = () => {
           >
             What our <span style={{ color: "orangered" }}>Customer</span> say
           </Typography>
-          <Testimonials ref={TestimonialsRef} />
-          <Gallery ref={GalleryRef} />
-          <Contact ref={ContactRef} />
+          <Testimonials />
+          <Gallery  />
+          <Contact />
         </div>
         <Footer />
       </main>

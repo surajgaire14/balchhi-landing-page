@@ -14,7 +14,6 @@ import "./style.css";
 const images = [one, two, three, four];
 
 function Memories() {
-  // const [hovered,setHovered] = React.useState(false)
   return (
     <div className="gallery__container">
       <div className="about">

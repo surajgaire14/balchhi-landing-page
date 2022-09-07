@@ -22,7 +22,7 @@ const icons = [
     icon: <PhishingIcon className="icon" fontSize="2rem" />,
   },
   { name: "Dinner", icon: <i className="fa-solid fa-utensils icon"></i> },
-  { name: "Others", icon: <i class="ri-more-2-fill icon"></i> },
+  { name: "Others", icon: <i className="ri-more-2-fill icon"></i> },
 ];
 
 const Facilities = () => {

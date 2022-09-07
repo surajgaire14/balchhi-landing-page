@@ -5,13 +5,12 @@ import React from "react";
 
 const App = () => {
   let router = useRoutes([
-    {path:"/",element:<Home />},
-    {path:"/home",element:<Home />},
-    {path:"*",element:<NotFound />},
-  ])
+    { path: "/", element: <Home /> },
+    { path: "/home", element: <Home /> },
+    { path: "*", element: <NotFound /> },
+  ]);
 
-  return router
-}
-
+  return router;
+};
 
 export default App;
