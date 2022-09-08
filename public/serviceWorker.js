@@ -1,5 +1,6 @@
 const CACHE_NAME = "version-1";
-const urlToCache = ["./index.html", "./offline.html","/"];
+const urlToCache = ["./index.html", "/", "./offline.html"];
+const Dynamic_Cache_Name = "dynamic-version-v1";
 
 const self = this;
 
@@ -16,27 +17,36 @@ self.addEventListener("install", (e) => {
 //listen for request
 self.addEventListener("fetch", (e) => {
   e.respondWith(
-    caches.match(e.request).then(async () => {
-      try {
-        return await fetch(e.request);
-      } catch {
-        return await caches.match("offline.html");
-      }
-    })
+    caches
+      .match(e.request)
+      .then((res) => {
+        return (
+          res ||
+          fetch(e.request).then((res) => {
+            return caches.open(Dynamic_Cache_Name).then((cache) => {
+              cache.put(e.request.url, res.clone());
+              return res;
+            });
+          })
+        );
+      })
+      .catch(() => {
+        if (e.request.url.indexof(".html") > -1) {
+          return caches.match("./offline.html");
+        }
+      })
   );
 });
 
 //activate the service worker
 self.addEventListener("activate", (e) => {
-  const cacheWhitelist = [];
-  cacheWhitelist.push(CACHE_NAME);
   e.waitUntil(
-    caches.keys().then((cacheNames) => Promise.all(
-      cacheNames.map((cacheName) => {
-        if(!cacheWhitelist.includes(cacheName)){
-          return caches.delete(cacheName)
-        }
-      })
-    ))
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys
+          .filter((key) => key !== CACHE_NAME && key !== Dynamic_Cache_Name)
+          .map((key) => caches.delete(key))
+      );
+    })
   );
 });
