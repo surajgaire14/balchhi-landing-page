@@ -34,12 +34,12 @@
           navigator.serviceWorker
             .register("./serviceWorker.js")
             .then((reg) => console.log("success", reg.scope))
-            .catch((err) => console.log("error:", err));
+            .catch((e) => console.log("error:", e.message));
         });
       }
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker
+          navigator.serviceWorker 
             .register("./serviceWorker.js")
             .then((reg) => console.log("success", reg.scope))
             .catch((err) => console.log("error:", err));
