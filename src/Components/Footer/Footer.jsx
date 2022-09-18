@@ -1,6 +1,9 @@
 import { Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import ReactTooltip from "react-tooltip";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./style.css";
 
 const links = [
@@ -17,6 +20,8 @@ const Footer = () => {
       navigate("www.google.com");
     }
   };
+
+  const notify = () => toast("Number Copied", { theme: "dark" });
 
   return (
     <div className="footer__container">
@@ -40,6 +45,26 @@ const Footer = () => {
               <a href="https://web.whatsapp.com/">
                 <i className="ri-whatsapp-line"></i>
               </a>
+              <button
+                onClick={notify}
+                style={{
+                  background: "transparent",
+                  color: "#fff",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
+                <i
+                  data-tip="click here to copy phone number"
+                  onClick={() => {
+                    navigator.clipboard.writeText("071591015");
+                  }}
+                  className="ri-phone-fill"
+                ></i>
+              </button>
+              <p style={{ color: "#fff" }}>071591015</p>
+              <ReactTooltip />
+              <ToastContainer position="bottom-right" autoClose={2000} />
             </div>
           </div>
           <div className="content">
