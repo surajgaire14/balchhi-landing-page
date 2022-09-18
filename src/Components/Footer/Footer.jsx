@@ -46,7 +46,7 @@ const Footer = () => {
                 <i className="ri-whatsapp-line"></i>
               </a>
               <button
-                onClick={notify}
+                onClick={() => notify()}
                 style={{
                   background: "transparent",
                   color: "#fff",
