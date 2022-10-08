@@ -9,6 +9,7 @@ import Testimonials from "../Components/Testimonials/Testimonials";
 import Gallery from "../Components/Gallery/Gallery";
 import Contact from "../Components/Contact/Contact";
 import Footer from "../Components/Footer/Footer";
+import Menu from "../Components/Menu/Menu"
 import Aos from "aos";
 import React, { useEffect } from "react";
 
@@ -16,8 +17,6 @@ const Home = () => {
   useEffect(() => {
     Aos.init();
   }, []);
-
-
 
   return (
     <>
@@ -27,6 +26,7 @@ const Home = () => {
           <Hero  />
           <Memories />
           <Facilities  />
+          <Menu />
           <About  />
           <Typography
             variant="h2"

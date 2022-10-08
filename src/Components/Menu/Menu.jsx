@@ -1,12 +1,12 @@
 import React from "react";
 import { Typography } from "@mui/material";
-import one from "../../images/places/1.jpg";
-import two from "../../images/places/2.jpg";
-import three from "../../images/places/3.jpg";
-import four from "../../images/places/4.jpg";
-import five from "../../images/places/5.jpg";
-import six from "../../images/places/6.jpg";
-import seven from "../../images/places/7.jpg";
+import one from "../../images/menus/one.jpg"
+import two from "../../images/menus/two.jpg";
+import three from "../../images/menus/three.jpg";
+import four from "../../images/menus/four.jpg";
+import five from "../../images/menus/five.jpg";
+import six from "../../images/menus/six.jpg";
+import seven from "../../images/menus/seven.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade } from "swiper";
 import "swiper/css";
@@ -16,7 +16,7 @@ import "./style.css";
 
 const images = [one, two, three, four, five, six, seven];
 
-function Memories() {
+function Menu() {
   return (
     <div
       className="gallery__container"
@@ -27,13 +27,13 @@ function Memories() {
     >
       <div className="about">
         <Typography variant="h1" component={"h1"}>
-          Our <span style={{ color: "orangered" }}>Popular</span> places
+          Our <span style={{ color: "orangered" }}>Menu</span> 
         </Typography>
         <Typography variant="p" component={"p"}>
-          Our target is to provide you with a best quality service.
+          Our target is to provide you with a best food available in the town.
         </Typography>
       </div>
-      <div className="swiperContainer">
+      <div className="menuSwiperContainer">
         <Swiper
           className="swiperSlide"
           slidesPerView={
@@ -60,4 +60,4 @@ function Memories() {
   );
 }
 
-export default Memories;
+export default Menu;

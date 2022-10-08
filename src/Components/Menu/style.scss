@@ -1,0 +1,101 @@
+.gallery__container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding: 30px 0;
+
+  @media (max-width: 426px) {
+    margin: 0;
+  }
+
+  @media (min-width: 426px) and (max-width: 769px) {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1025px) {
+    margin: 0;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1441px) {
+    margin: 0;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0.5vh 0;
+    p {
+      font-weight: 500;
+      font-size: 1.3rem;
+
+      @media (max-width: 426px) {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      @media (min-width: 769px) and (max-width: 1025px) {
+        margin-bottom: 10px;
+      }
+      @media (min-width: 1025px) and (max-width: 14401px) {
+        margin-bottom: 10px;
+      }
+    }
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+
+      @media (max-width: 426px) {
+        text-align: center;
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .menuSwiperContainer {
+    width: 100%;
+    .swiperSlide {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: 100%;
+      height: 80vh;
+      .image__container {
+        width: 33%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          // object-fit: contain;
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          @media (max-width: 425px) {
+            width: 80vw;
+            object-fit: cover;
+          }
+
+          @media (min-width: 426px) and (max-width: 769px) {
+            width: 40vw;
+            object-fit: cover;
+          }
+
+          @media (min-width: 769px) and (max-width: 1025px) {
+            object-fit: cover;
+          }
+          @media (min-width: 1025px) and (max-width: 1441px) {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: orangered !important;
+}
