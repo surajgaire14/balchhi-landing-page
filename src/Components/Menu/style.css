@@ -79,7 +79,7 @@
 .gallery__container .menuSwiperContainer .swiperSlide {
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (minmax(0, 1fr))[3]; */
+  -ms-grid-columns: (minmax(0, 1fr))[3];
   grid-template-columns: repeat(3, minmax(0, 1fr));
   width: 100%;
   height: 80vh;
@@ -96,30 +96,15 @@
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .gallery__container .menuSwiperContainer .swiperSlide .image__container img {
-    width: 80vw;
-    -o-object-fit: cover;
-       object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 @media (min-width: 426px) and (max-width: 769px) {
   .gallery__container .menuSwiperContainer .swiperSlide .image__container img {
     width: 40vw;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-@media (min-width: 769px) and (max-width: 1025px) {
-  .gallery__container .menuSwiperContainer .swiperSlide .image__container img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-@media (min-width: 1025px) and (max-width: 1441px) {
-  .gallery__container .menuSwiperContainer .swiperSlide .image__container img {
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 
