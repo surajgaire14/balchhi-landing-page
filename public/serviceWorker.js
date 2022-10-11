@@ -1,54 +1,37 @@
-const CACHE_NAME = "version-1";
-const urlToCache = ["./index.html", "/", "./offline.html","/static/js","/static/css"];
 const Dynamic_Cache_Name = "dynamic-version-v1";
 
 const self = this;
 
 //install service worker
 self.addEventListener("install", (e) => {
-  // console.log(e)
+  console.log("service worker:Installed");
+});
+
+//activate the service worker
+self.addEventListener("activate", (e) => {
   e.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log("opened cache");
-      return cache.addAll(urlToCache);
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cache) => {
+          return cache !== Dynamic_Cache_Name && caches.delete(cache);
+        })
+      );
     })
   );
 });
 
 //listen for request
 self.addEventListener("fetch", (e) => {
-  console.log(e.request.url);
   e.respondWith(
-    caches
-      .match(e.request)
+    fetch(e.request)
       .then((res) => {
-        return (
-          res ||
-          fetch(e.request).then(async (res) => {
-            const cache = await caches.open(Dynamic_Cache_Name);
-            cache.put(e.request.url, res.clone());
-            return res;
-          })
-        );
+        //make copy/clone of response
+        const resClone = res.clone();
+        caches.open(Dynamic_Cache_Name).then((cache) => {
+          cache.put(e.request, resClone);
+        });
+        return res;
       })
-      .catch((error) => {
-        console.log(error.message);
-        if (e.request.url.indexof(".html") > -1) {
-          return caches.match("./offline.html");
-        }
-      })
-  );
-});
-
-//activate the service worker
-self.addEventListener("activate", (e) => {
-  e.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys
-          .filter((key) => key !== CACHE_NAME && key !== Dynamic_Cache_Name)
-          .map((key) => caches.delete(key))
-      );
-    })
+      .catch((err) => caches.match(e.request).then((res) => res))
   );
 });

@@ -34,7 +34,7 @@
           navigator.serviceWorker
             .register("./serviceWorker.js")
             .then((reg) => console.log("success", reg.scope))
-            .catch((e) => console.log("error:", e.message));
+            .catch((e) => console.log("error:", e));
         });
       }
     </script>
