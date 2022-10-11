@@ -64,12 +64,15 @@
       .image__container {
         width: 33%;
         height: 400px;
+        overflow: hidden;
         img {
+          transition: .4s;
           width: 100%;
           height: 100%;
+
           // object-fit: contain;
           &:hover{
-            transform: scale(1.1);
+            transform: scale(1.1,1.1);
           }
 
           @media (max-width: 425px) {

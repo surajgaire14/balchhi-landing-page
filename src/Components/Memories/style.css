@@ -63,8 +63,11 @@
 .gallery__container .swiperContainer .swiperSlide .image__container {
   width: 33%;
   height: 400px;
+  overflow: hidden;
 }
 .gallery__container .swiperContainer .swiperSlide .image__container img {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -72,8 +75,8 @@
   border-radius: 5px;
 }
 .gallery__container .swiperContainer .swiperSlide .image__container img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 @media (max-width: 425px) {
   .gallery__container .swiperContainer .swiperSlide .image__container img {
