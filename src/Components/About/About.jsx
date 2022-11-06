@@ -2,9 +2,11 @@ import React from "react";
 import about from "../../images/about.jpg";
 import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 export default function About() {
+  const navigate = useNavigate()
   return (
     <div className="about_container" id="About Us">
       <div className="image" data-aos={"fade-right"}>
@@ -39,7 +41,7 @@ export default function About() {
           Enjoy our dazzling dishes and make the most of your eating background
           with us!
         </Typography>
-        <Button>Learn More</Button>
+        <Button onClick={() => navigate("/about")} >Learn More</Button>
       </div>
     </div>
   );

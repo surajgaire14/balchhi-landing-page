@@ -14,6 +14,7 @@ import { Close } from "@mui/icons-material";
 import { animateScroll, Link } from "react-scroll";
 import UpdateScrollPosition from "../../Hooks/UpdateScrollPosition";
 import logo from "../../images/balchhiLogo1.png";
+import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 const drawerWidth = "100%";
@@ -25,6 +26,7 @@ export default function Navbar() {
   const [checked, setChecked] = React.useState(false);
   const containerRef = React.useRef(null);
 
+  const navigate = useNavigate();
   let scrollPosition = UpdateScrollPosition();
 
   const handleDrawerToggle = () => {
@@ -65,7 +67,6 @@ export default function Navbar() {
         }}
         ref={containerRef}
         position="fixed"
-        // disablepadding={true}
         className={`${scrollPosition > 30 && !checked && "Shadow"}`}
         id="Home"
       >
@@ -89,7 +90,12 @@ export default function Navbar() {
           >
             {!checked ? <MenuItem /> : <Close />}
           </IconButton>
-          <Link to="/" style={{ cursor: "pointer" }} className="image__link">
+          <Link
+            to="/"
+            style={{ cursor: "pointer" }}
+            className="image__link"
+            onClick={() => navigate("/")}
+          >
             <img
               src={logo}
               alt="logo"
