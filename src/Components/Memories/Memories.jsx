@@ -6,6 +6,7 @@ import three from "../../images/memories/3.jpg";
 import four from "../../images/memories/4.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, EffectFade } from "swiper";
+import useMeasure from "../../utils/ResizeObserver";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
@@ -14,6 +15,7 @@ import "./style.css";
 const images = [one, two, three, four];
 
 function Memories() {
+  const [bind, { width }] = useMeasure();
   return (
     <div className="gallery__container">
       <div className="about">
@@ -24,14 +26,14 @@ function Memories() {
           Create some beautiful memories at balchhi
         </Typography>
       </div>
-      <div className="swiperContainer">
+      <div className="swiperContainer" {...bind}>
         <Swiper
           className="swiperSlide"
           slidesPerView={
-            window.innerWidth >= 992 ? 3 : 1 && window.innerWidth >= 768 ? 2 : 1
+            width >= 992 ? 3 : 1 && width >= 768 ? 2 : 1
           }
           modules={[Navigation, EffectFade]}
-          spaceBetween = {10}
+          spaceBetween={10}
           navigation={true}
         >
           {images.map((image, i) => {

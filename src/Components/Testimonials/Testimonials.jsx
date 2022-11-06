@@ -8,6 +8,7 @@ import Testimonial from "./Testimonial";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Pagination } from "swiper";
+import useMeasure from "../../utils/ResizeObserver";
 
 const Persons = [
   {
@@ -34,6 +35,7 @@ const Persons = [
 ];
 
 function Testimonials() {
+  const [bind] = useMeasure();
   return (
     <div
       style={{ width: "100%", marginTop: "50px" }}
@@ -41,6 +43,7 @@ function Testimonials() {
       data-aos-delay={50}
       data-aos-duration={1000}
       data-aos-easing="ease-in-out"
+      {...bind}
     >
       <Swiper
         slidesPerView={window.innerWidth > 768 ? 2 : 1}
