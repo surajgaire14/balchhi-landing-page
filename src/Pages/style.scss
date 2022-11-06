@@ -87,10 +87,12 @@
 
 .life {
   margin: 1em;
-  font-size: calc(.5vh + .5em);
+  font-size: calc(2vh + .5em);
   font-weight: 500;
   line-height: 1.2;
+  text-align: center;
 }
+
 
 .about__image img {
   /* object-position: top center; */
@@ -279,4 +281,5 @@
 
 .images-container {
   margin: 3em 0;
+
 }
