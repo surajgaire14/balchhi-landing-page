@@ -26,27 +26,17 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module">
-      const registerServiceWorker = async () => {
-        if ("serviceWorker" in navigator) {
-          try {
-            const registration = await navigator.serviceWorker.register(
-              "./serviceWorker.js",
-              { scope: "/" }
-            );
-            if (registration.installing) {
-              console.log("Service worker installing");
-            } else if (registration.waiting) {
-              console.log("Service worker installed");
-            } else if (registration.active) {
-              console.log("Service worker active");
+      const unregistersw = () => {
+        if (window.navigator && navigator.serviceWorker) {
+          navigator.serviceWorker.getRegistrations().then((registrations) => {
+            for (let registration of registrations) {
+              registration.unregister();
             }
-          } catch (e) {
-            console.error(`registration failed with ${e}`);
-          }
+          });
         }
       };
 
-      registerServiceWorker();
+      unregistersw();
     </script>
   </body>
 </html>
