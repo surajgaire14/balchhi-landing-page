@@ -26,17 +26,22 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/index.jsx">
-      const unregistersw = () => {
-        if (window.navigator && navigator.serviceWorker) {
-          navigator.serviceWorker.getRegistrations().then((registrations) => {
-            for (let registration of registrations) {
-              registration.unregister();
-            }
-          });
-        }
-      };
+      // const unregistersw = () => {
+      //   if (window.navigator && navigator.serviceWorker) {
+      //     navigator.serviceWorker.getRegistrations().then((registrations) => {
+      //       for (let registration of registrations) {
+      //         registration.unregister();
+      //       }
+      //     });
+      //   }
+      // };
 
-      unregistersw();
+      // unregistersw();
+      if("serviceworker" in navigator){
+        window.addEventListener("load",() => {
+          navigator.serviceWorker.register('./dist/sw.js')
+        })
+      }
     </script>
   </body>
 </html>
