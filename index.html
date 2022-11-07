@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Balchhi PWA app" />
-    <link rel="apple-touch-icon" href="./balchhiLogo.jpg" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="manifest" href="./manifest.json" />
-    <title>Balchhi Resort</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script type="module" src="/src/index.jsx">
-      const unregistersw = () => {
-        if (window.navigator && navigator.serviceWorker) {
-          navigator.serviceWorker.getRegistrations().then((registrations) => {
-            for (let registration of registrations) {
-              registration.unregister();
-            }
-          });
-        }
-      };
 
-      unregistersw();
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description"
+    content="Balchhi is equipped with number of facilities such as Bar,Kitchen and peaceful place to hangout.">
+  <meta name=”robots” content="index, nofollow">
+  <title>Balchhi Resort</title>
+  <link rel="apple-touch-icon" href="./balchhiLogo.jpg" />
+  <link rel="shortcut icon" href="./favicon.ico">
+  <meta property="og:url" content="https://www.balchhiresort.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Balchhi Resort" />
+  <meta property="og:description" content="Balchhi is equipped with number of facilities such as Bar,Kitchen and peaceful place to hangout" />
+  <meta property="og:image"
+    content="https://www.balchhiresort.com/assets/hero1.6036e8c7.jpg" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="manifest" href="./manifest.json" />
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <script type="module" src="/src/index.jsx">
+    const unregistersw = () => {
+      if (window.navigator && navigator.serviceWorker) {
+        navigator.serviceWorker.getRegistrations().then((registrations) => {
+          for (let registration of registrations) {
+            registration.unregister();
+          }
+        });
+      }
+    };
+
+    unregistersw();
+  </script>
+</body>
+
 </html>
