@@ -16,8 +16,6 @@ const Hero = ({ ref }) => {
     setOpen(false);
   };
 
-  console.log(window.innerWidth);
-
   return (
     <div className="hero__container" ref={ref}>
       <div className="about">

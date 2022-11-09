@@ -23,7 +23,7 @@ const Home = () => {
         <Memories />
         <Facilities />
         <Menu />
-        <About />
+        <About/>
         <Typography
           variant="h2"
           component={"h1"}
@@ -43,4 +43,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default  Home;

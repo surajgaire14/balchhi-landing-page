@@ -14,13 +14,13 @@ import { Close } from "@mui/icons-material";
 import { animateScroll, Link } from "react-scroll";
 import UpdateScrollPosition from "../../Hooks/UpdateScrollPosition";
 import logo from "../../images/balchhiLogo1.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link as RouterLink } from "react-router-dom";
 import "./style.css";
 
 const drawerWidth = "100%";
 const navItems = ["Home", "Facilities", "About Us", "Contact"];
 
-export default function Navbar() {
+export default function Navbar({ showlinks, setShowlinks }) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [tabOpen, setTabOpen] = React.useState(false);
   const [checked, setChecked] = React.useState(false);
@@ -90,11 +90,13 @@ export default function Navbar() {
           >
             {!checked ? <MenuItem /> : <Close />}
           </IconButton>
-          <Link
-            to="/"
+          <RouterLink
+            to={"/"}
             style={{ cursor: "pointer" }}
             className="image__link"
-            onClick={() => navigate("/")}
+            // onClick={() => {
+            //  navigate("/")
+            // }}
           >
             <img
               src={logo}
@@ -102,44 +104,45 @@ export default function Navbar() {
               style={{ borderRadius: "50%", width: "5rem" }}
               className="images"
             />
-          </Link>
+          </RouterLink>
           <Box
             sx={{
               display: { xs: "none", sm: "none", gap: "50px", md: "flex" },
             }}
           >
-            {navItems.map((item, i) => (
-              <Link
-                key={i}
-                style={{
-                  cursor: "pointer",
-                  fontSize: "18px",
-                  lineHeight: "20px",
-                  color: scrollPosition > 30 ? "#000" : "#000",
-                  fontWeight: scrollPosition > 30 ? "normal" : "normal",
-                }}
-                className={`navLinks ${
-                  item === "Home" && scrollPosition < 627
-                    ? "active"
-                    : item === "Facilities" &&
-                      scrollPosition >= 627 &&
-                      scrollPosition < 1461
-                    ? "active"
-                    : item === "About Us" &&
-                      scrollPosition > 1460 &&
-                      scrollPosition < 2400
-                    ? "active"
-                    : item === "Contact" && scrollPosition > 2400 && "active"
-                }`}
-                to={item === "Home" ? "" : item}
-                smooth={true}
-                offset={-170}
-                duration={1000}
-                onClick={item === "Home" && animateScroll.scrollToTop}
-              >
-                {item}
-              </Link>
-            ))}
+            {showlinks &&
+              navItems.map((item, i) => (
+                <Link
+                  key={i}
+                  style={{
+                    cursor: "pointer",
+                    fontSize: "18px",
+                    lineHeight: "20px",
+                    color: scrollPosition > 30 ? "#000" : "#000",
+                    fontWeight: scrollPosition > 30 ? "normal" : "normal",
+                  }}
+                  className={`navLinks ${
+                    item === "Home" && scrollPosition < 627
+                      ? "active"
+                      : item === "Facilities" &&
+                        scrollPosition >= 627 &&
+                        scrollPosition < 1461
+                      ? "active"
+                      : item === "About Us" &&
+                        scrollPosition > 1460 &&
+                        scrollPosition < 2400
+                      ? "active"
+                      : item === "Contact" && scrollPosition > 2400 && "active"
+                  }`}
+                  to={item === "Home" ? "" : item}
+                  smooth={true}
+                  offset={-170}
+                  duration={1000}
+                  onClick={() => {item === "Home" && animateScroll.scrollToTop()}}
+                >
+                  {item}
+                </Link>
+              ))}
           </Box>
           <div style={{ display: "flex" }} className="buttonBox">
             <Button

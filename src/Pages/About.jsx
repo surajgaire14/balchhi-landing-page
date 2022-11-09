@@ -2,7 +2,6 @@ import React from "react";
 import bhinaju from "../images/bhinaju.jpg";
 import bijayDai from "../images/bijayneupanedai.jpg";
 import "./style.css";
-
 import one from "../images/memories/1.jpg";
 import two from "../images/memories/2.jpg";
 import three from "../images/memories/3.jpg";

@@ -6,15 +6,14 @@ import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 
-
 const App = () => {
   return (
     <>
-    <Navbar />
+      <Navbar/>
       <Routes>
-        <Route path="/" element= {<Home />}/>
-        <Route path="/about" element = {<About />} />
-        <Route path="*" element={<NotFound />}/>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

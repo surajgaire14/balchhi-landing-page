@@ -2,11 +2,12 @@ import React from "react";
 import about from "../../images/about.jpg";
 import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 import "./style.css";
 
 export default function About() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   return (
     <div className="about_container" id="About Us">
       <div className="image" data-aos={"fade-right"}>
@@ -29,9 +30,9 @@ export default function About() {
           </Typography>
         </div>
         <Typography component="p" variant="p">
-          Prakash Kharal and Bijay Neupane together opened the balchhi in 2019 AD in manigram.It is
-          well known with a substantial gathering of people including
-          families,kids and customers arriving in daily basis.
+          Prakash Kharal and Bijay Neupane together opened the balchhi in 2019
+          AD in manigram.It is well known with a substantial gathering of people
+          including families,kids and customers arriving in daily basis.
         </Typography>
         <Typography component="p" variant="p">
           In case if you are searching for top notch food and peacful place to
@@ -41,7 +42,13 @@ export default function About() {
           Enjoy our dazzling dishes and make the most of your eating background
           with us!
         </Typography>
-        <Button onClick={() => navigate("/about")} >Learn More</Button>
+        <Button
+          onClick={() => {
+            navigate("/about")
+          }}
+        >
+          Learn More
+        </Button>
       </div>
     </div>
   );
