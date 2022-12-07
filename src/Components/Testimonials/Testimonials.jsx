@@ -32,6 +32,13 @@ const Persons = [
     review:
       "It is a place to visit once in your lifetime.I have listened my friend recommendation and glad i did.",
   },
+  {
+    name: "Sudeep Misora",
+    img: laxman,
+    rating: <Rating value={4} readOnly />,
+    review:
+      "It is a place to visit once in your lifetime.I have listened my friend recommendation and glad i did.",
+  },
 ];
 
 function Testimonials() {
