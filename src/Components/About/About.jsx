@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 import { useNavigate,useLocation } from "react-router-dom";
 import "./style.css";
 
-export default function About() {
+export default function About({setActivePage}) {
   const navigate = useNavigate();
 
   return (
@@ -45,6 +45,7 @@ export default function About() {
         <Button
           onClick={() => {
             navigate("/about")
+            setActivePage("About")
           }}
         >
           Learn More

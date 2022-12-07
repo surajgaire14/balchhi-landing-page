@@ -46,6 +46,11 @@ const owners = [
 ];
 
 const About = () => {
+
+  React.useEffect(() => {
+    window.scrollTo(0,0)
+  },[])
+
   return (
     <>
       <main id="about__page">

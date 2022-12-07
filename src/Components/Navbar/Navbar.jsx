@@ -20,7 +20,7 @@ import "./style.css";
 const drawerWidth = "100%";
 const navItems = ["Home", "Facilities", "About Us", "Contact"];
 
-export default function Navbar() {
+export default function Navbar({setActivePage, activePage}) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [tabOpen, setTabOpen] = React.useState(false);
   const [checked, setChecked] = React.useState(false);
@@ -107,7 +107,7 @@ export default function Navbar() {
               display: { xs: "none", sm: "none", gap: "50px", md: "flex" },
             }}
           >
-            {navItems.map((item, i) => (
+            {activePage!== "About" && navItems.map((item, i) => (
               <Link
                 key={i}
                 style={{
