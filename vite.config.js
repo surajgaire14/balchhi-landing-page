@@ -12,6 +12,11 @@ export default defineConfig({
         enabled: true,
       },
       injectRegister: "auto",
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        cleanupOutdatedCaches: false,
+        sourcemap: true
+      }
     }),
   ],
 });
