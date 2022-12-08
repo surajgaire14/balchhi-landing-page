@@ -2,6 +2,7 @@ import React from "react";
 import gaire from "../../images/gaire.jpg";
 import riwaj from "../../images/riwaj.jpg";
 import laxman from "../../images/laxman.jpg";
+import Sudeep from "../../images/Sudeep.jpg"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Rating } from "@mui/material";
 import Testimonial from "./Testimonial";
@@ -33,11 +34,11 @@ const Persons = [
       "It is a place to visit once in your lifetime.I have listened my friend recommendation and glad i did.",
   },
   {
-    name: "Sudeep Misora",
-    img: laxman,
+    name: "Sudeep Mishra",
+    img: Sudeep,
     rating: <Rating value={4} readOnly />,
     review:
-      "It is a place to visit once in your lifetime.I have listened my friend recommendation and glad i did.",
+      "It was a nostalgic experience staying at balchhi,I would definitely recomment others.",
   },
 ];
 
