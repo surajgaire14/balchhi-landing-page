@@ -14,13 +14,13 @@ import { Close } from "@mui/icons-material";
 import { animateScroll, Link } from "react-scroll";
 import UpdateScrollPosition from "../../Hooks/UpdateScrollPosition";
 import logo from "../../images/balchhiLogo1.png";
-import { useNavigate, Link as RouterLink } from "react-router-dom";
+import { useNavigate, Link as RouterLink ,useLocation} from "react-router-dom";
 import "./style.css";
 
 const drawerWidth = "100%";
 const navItems = ["Home", "Facilities", "About Us", "Contact"];
 
-export default function Navbar({setActivePage, activePage}) {
+export default function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [tabOpen, setTabOpen] = React.useState(false);
   const [checked, setChecked] = React.useState(false);
@@ -28,6 +28,8 @@ export default function Navbar({setActivePage, activePage}) {
 
   // const navigate = useNavigate();
   let scrollPosition = UpdateScrollPosition();
+
+  const location = useLocation()
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -107,7 +109,7 @@ export default function Navbar({setActivePage, activePage}) {
               display: { xs: "none", sm: "none", gap: "50px", md: "flex" },
             }}
           >
-            {activePage!== "About" && navItems.map((item, i) => (
+            {location.pathname === "/" && navItems.map((item, i) => (
               <Link
                 key={i}
                 style={{
