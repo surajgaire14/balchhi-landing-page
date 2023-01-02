@@ -16,7 +16,7 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg}'],
         cleanupOutdatedCaches: false,
         sourcemap: true
-      }
+      },
     }),
   ],
 });

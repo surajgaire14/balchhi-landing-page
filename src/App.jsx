@@ -8,30 +8,13 @@ import Footer from "./Components/Footer/Footer";
 // import { useContext } from "react";
 
 const App = () => {
-  const [activePage, setActivePage] = React.useState("Home");
-
   return (
     <>
-      <Navbar activePage={activePage} setActivePage={setActivePage} />
+      <Navbar />
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={<Home />}
-          setActivePage={setActivePage}
-        />
-        <Route
-          exact
-          path="/about"
-          element={<About />}
-          setActivePage={setActivePage}
-        />
-        <Route
-          exact
-          path="*"
-          element={<NotFound />}
-          setActivePage={setActivePage}
-        />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>

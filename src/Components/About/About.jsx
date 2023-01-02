@@ -2,10 +2,10 @@ import React from "react";
 import about from "../../images/about.jpg";
 import { Typography } from "@mui/material";
 import { Button } from "@mui/material";
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./style.css";
 
-export default function About({setActivePage}) {
+export default function About() {
   const navigate = useNavigate();
 
   return (
@@ -44,8 +44,7 @@ export default function About({setActivePage}) {
         </Typography>
         <Button
           onClick={() => {
-            navigate("/about")
-            setActivePage("About")
+            navigate("/about");
           }}
         >
           Learn More
